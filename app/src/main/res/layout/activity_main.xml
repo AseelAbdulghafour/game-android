@@ -8,7 +8,7 @@
 
 
     <TextView
-        android:id="@+id/questionTextView"
+        android:id="@+id/questionView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Questions"
@@ -26,7 +26,6 @@
         android:id="@+id/trueButton"
         android:layout_width="180dp"
         android:layout_height="60dp"
-
         android:layout_marginBottom="58dp"
         android:backgroundTint="#3F51B5"
         android:text="true"
@@ -41,11 +40,9 @@
         android:id="@+id/falseButton"
         android:layout_width="180dp"
         android:layout_height="60dp"
-
         android:layout_marginBottom="58dp"
         android:backgroundTint="#3F51B5"
         android:text="false"
-
         app:layout_constraintBaseline_toBottomOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/trueButton"
@@ -53,14 +50,13 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/correctTextView"
+        android:id="@+id/correctView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/greencircle"
-
         android:fallbackLineSpacing="false"
         android:hapticFeedbackEnabled="false"
-        android:text="Correct "
+        android:text="Correct"
         android:textAlignment="center"
         android:textColor="#f3f4f1"
         android:textSize="20sp"
@@ -71,16 +67,12 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-
-
         app:layout_constraintVertical_bias="0.255" />
 
     <Button
-        android:id="@+id/nextQ"
+        android:id="@+id/nextButton"
         android:layout_width="316dp"
         android:layout_height="78dp"
-
-
         android:layout_marginBottom="50dp"
         android:text="next question"
         android:visibility="invisible"
@@ -89,7 +81,7 @@
         tools:layout_editor_absoluteX="47dp" />
 
     <TextView
-        android:id="@+id/WrongTextView"
+        android:id="@+id/WrongView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/redcircle"
@@ -109,7 +101,7 @@
         app:layout_constraintVertical_bias="0.499" />
 
     <TextView
-        android:id="@+id/scoreTextView"
+        android:id="@+id/scoreView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="score"

@@ -12,7 +12,7 @@ package com.example.game;
 
 public class MainActivity extends AppCompatActivity {
 
-    private TextView questionTextView, correctTextView, wrongTextView, scoreTextView;
+    private TextView questionView, correctView, wrongView, scoreView;
     private Button trueButton, falseButton, nextButton;
 
     private ArrayList<String> question;
@@ -27,13 +27,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        questionTextView = findViewById(R.id.questionTextView);
-        correctTextView = findViewById(R.id.correctTextView);
-        wrongTextView = findViewById(R.id.WrongTextView);
+        questionView = findViewById(R.id.questionView);
+        correctView = findViewById(R.id.correctView);
+        wrongView = findViewById(R.id.WrongView);
         trueButton = findViewById(R.id.trueButton);
         falseButton = findViewById(R.id.falseButton);
-        nextButton = findViewById(R.id.nextQ);
-        scoreTextView = findViewById(R.id.scoreTextView);
+        nextButton = findViewById(R.id.nextButton);
+        scoreView = findViewById(R.id.scoreView);
 
 
         question = new ArrayList<>();
@@ -57,12 +57,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void displayQuestion() {
-        questionTextView.setText(question.get(currentIndex));
+        questionView.setText(question.get(currentIndex));
 
-        scoreTextView.setText(String.valueOf(grade));
+        scoreView.setText(String.valueOf(grade));
 
-        correctTextView.setVisibility(View.INVISIBLE);
-        wrongTextView.setVisibility(View.INVISIBLE);
+        correctView.setVisibility(View.INVISIBLE);
+        wrongView.setVisibility(View.INVISIBLE);
         nextButton.setVisibility(View.INVISIBLE);
         trueButton.setVisibility(View.VISIBLE);
         falseButton.setVisibility(View.VISIBLE);
@@ -73,26 +73,26 @@ public class MainActivity extends AppCompatActivity {
 
         if (userAnswer == correctAnswer) {
 
-            correctTextView.setVisibility(View.VISIBLE);
-            wrongTextView.setVisibility(View.INVISIBLE);
+            correctView.setVisibility(View.VISIBLE);
+            wrongView.setVisibility(View.INVISIBLE);
             trueButton.setVisibility(View.INVISIBLE);
             falseButton.setVisibility(View.INVISIBLE);
             nextButton.setVisibility(View.VISIBLE);
 
-            TheGrade();
+            gradecalc();
         } else {
 
-            correctTextView.setVisibility(View.INVISIBLE);
-            wrongTextView.setVisibility(View.VISIBLE);
+            correctView.setVisibility(View.INVISIBLE);
+            wrongView.setVisibility(View.VISIBLE);
             trueButton.setVisibility(View.VISIBLE);
             falseButton.setVisibility(View.VISIBLE);
             nextButton.setVisibility(View.INVISIBLE);
         }
     }
 
-    public void TheGrade() {
+    public void gradecalc() {
         grade++;
-        scoreTextView.setText(String.valueOf(grade));
+        scoreView.setText(String.valueOf(grade));
     }
 
     private void nextQuestion() {
